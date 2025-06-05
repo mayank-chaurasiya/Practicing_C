@@ -1,0 +1,15 @@
+# Ignore VS Code settings
+.vscode/
+Revision/
+check_version.c
+
+# Ignore compiled executables
+*.exe
+
+# Ignore temporary and backup files
+*~
+*.tmp
+
+# (Optional) Ignore object files
+*.o
+*.obj
