@@ -99,4 +99,22 @@ int movePlayer(int currentPlayer, int roll)
     snakesAndLadders[65] = -8;
     snakesAndLadders[77] = 5;
     snakesAndLadders[98] = -10;
+
+    int newSquare = newPosition + snakesAndLadders[newPosition];
+
+    if (newSquare > 100)
+    {
+        return currentPlayer; // as we know players cannot move beyond square 100
+    }
+
+    return newSquare;
+}
+
+int main()
+{
+    srand(time(0)); // Initialize random seed
+    int currentPlayer = 1;
+    int won = 0;
+
+    printf("Snake and Ladder Game \n");
 }
