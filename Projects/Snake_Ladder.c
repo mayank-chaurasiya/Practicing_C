@@ -25,6 +25,58 @@ void printBoard()
 
     while (val--)
     {
-        
+        if (alt == 0)
+        {
+            left_Right--;
+            if (left_Right == player1)
+            {
+                printf("#P1     ");
+            }
+            else if (left_Right == player2)
+            {
+                printf("#P2     ");
+            }
+            else
+            {
+                printf("%d      ", board[left_Right]);
+            }
+
+            if (left_Right % 10 == 1)
+            {
+                printf("\n\n");
+                alt = 1;
+                left_Right -= 10;
+            }
+        }
+        else
+        {
+            right_Left++;
+            if (right_Left == player1)
+            {
+                printf("#P1     ");
+            }
+            else if (right_Left == player2)
+            {
+                printf("#P2     ");
+            }
+            else
+            {
+                printf("%d      ", board[right_Left]);
+            }
+
+            if (right_Left % 10 == 0)
+            {
+                printf("\n\n");
+                alt = 0;
+                right_Left -= 30;
+            }
+        }
+        if (right_Left == 10)
+        {
+            break;
+        }
     }
+    printf("\n");
 }
+
+
