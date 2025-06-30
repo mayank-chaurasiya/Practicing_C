@@ -93,4 +93,28 @@ int main()
             break;
         }
     }
+
+    if (tries >= MAX_TRIES)
+    {
+        printf("\nSorry, you've run out of tries. The word was: %s\n", secretWord);
+    }
+
+    return 0;
+}
+
+void displayWord(const char word[], const bool guessed[])
+{
+    printf("Word: ");
+    for (int i = 0; word[i] != '\0'; i++)
+    {
+        if (guessed[word[i] - 'a'])
+        {
+            printf("%c ", word[i]);
+        }
+        else
+        {
+            printf("_ ");
+        }
+    }
+    printf("\n");
 }
