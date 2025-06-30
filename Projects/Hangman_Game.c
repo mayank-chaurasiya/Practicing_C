@@ -61,7 +61,36 @@ int main()
 
         if (guessedLetters[guess - 'a'])
         {
-            
+            printf("You've already guessed that letter. Try again.\n");
+            continue;
+        }
+
+        guessedLetters[guess - 'a'] = true;
+
+        bool found = false;
+        for (int i = 0; i < wordLength; i++)
+        {
+            if (secretWord[i] == guess)
+            {
+                found = true;
+                guessedWord[i] = guess;
+            }
+        }
+
+        if (found)
+        {
+            printf("Good guess!\n");
+        }
+        else
+        {
+            printf("Sorry, the letter '%c' is not in the word. \n", guess);
+            tries++;
+        }
+
+        if (strcmp(secretWord, guessedWord) == 0)
+        {
+            printf("\nCongratulations! You've guessed the word: %s\n", secretWord);
+            break;
         }
     }
 }
