@@ -32,4 +32,36 @@ int main()
         {"elephant", "A Large mammal with a trunk"},
         {"democracy", "A government by the people"},
     };
+
+    // selecting a random word from the list
+    int wordIndex = rand() % 4;
+
+    const char *secretWord = wordList[wordIndex].word;
+    const char *hint = wordList[wordIndex].hint;
+
+    int wordLength = strlen(secretWord);
+    char guessedWord[MAX_WORD_LENGTH] = {0};
+    bool guessedLetters[26] = {false};
+
+    printf("Welcome to Hangman!\n");
+    printf("Hint: %s\n", hint);
+
+    int tries = 0;
+
+    while (tries < MAX_TRIES)
+    {
+        printf("\n");
+        displayWord(guessedWord, guessedLetters);
+        drawHangman(tries);
+
+        char guess;
+        printf("Enter a Letter: ");
+        scanf("%c", &guess);
+        guess = tolower(guess);
+
+        if (guessedLetters[guess - 'a'])
+        {
+            
+        }
+    }
 }
