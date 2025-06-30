@@ -148,5 +148,10 @@ int main()
                 won = 1;
             }
         }
+
+        // Switch to the other player
+        currentPlayer = (currentPlayer == 1) ? 2 : 1;
     }
+
+    return 0;
 }
