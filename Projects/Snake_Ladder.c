@@ -3,7 +3,7 @@
 #include <time.h>
 
 // Function to roll a six - sided die
-int rollDie() { return rand() % 6 + 1; }
+int rollDice() { return rand() % 6 + 1; }
 
 // global variables to store positions of player1 and player2
 int player1 = 0, player2 = 0;
@@ -117,4 +117,36 @@ int main()
     int won = 0;
 
     printf("Snake and Ladder Game \n");
+
+    while (!won)
+    {
+        printf("\nPlayer %d, press Enter to roll the dice...", currentPlayer);
+        getchar(); // wait for the player to press Enter
+
+        int roll = rollDice();
+        printf("You rolled a %d.\n", roll);
+
+        if (currentPlayer == 1)
+        {
+            player1 = movePlayer(player1, roll);
+            printf("Player1 is now at square %d.\n\n", player1);
+            printBoard();
+            if (player1 == 100)
+            {
+                printf("Player 1 wins!! \n");
+                won = 1;
+            }
+        }
+        else
+        {
+            player2 = movePlayer(player2, roll);
+            printf("Player2 is now at square %d.\n\n", player2);
+            printBoard();
+            if (player2 == 100)
+            {
+                printf("Player 2 wins!! \n");
+                won = 1;
+            }
+        }
+    }
 }
