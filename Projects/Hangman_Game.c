@@ -16,3 +16,20 @@ struct WordWithHint
 
 // Function to display current state of the word
 void displayWord(const char word[], const bool guessed[]);
+
+// Function to draw Hangman
+void drawHangman(int tries);
+
+int main()
+{
+    // Seed the random number generator with the current time
+    srand(time(NULL));
+
+    // Array of words with hints
+    struct WordWithHint wordList[] = {
+        {"pizza", "A popular Italian dish"},
+        {"beach", "Sandy shore by the sea"},
+        {"elephant", "A Large mammal with a trunk"},
+        {"democracy", "A government by the people"},
+    };
+}
