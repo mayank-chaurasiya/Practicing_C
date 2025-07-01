@@ -132,4 +132,32 @@ void account(void)
 
     printf("\n\nFATHER NAME..");
     scanf("%s", &u1.fathername);
+
+    printf("\n\nMOTHER NAME..");
+    scanf("%s", &u1.mothername);
+
+    printf("\n\nADDRESS..");
+    scanf("%s", &u1.address);
+
+    printf("\n\nACCOUNT TYPE..");
+    scanf("%s", &u1.typeaccount);
+
+    printf("\n\nDATE OF BIRTH..");
+    printf("\nDATE-");
+    scanf("%d", &u1.date);
+    printf("\nMONTH-");
+    scanf("%d", &u1.month);
+    printf("\nYEAR-");
+    scanf("%d", &u1.year);
+
+    printf("\n\nADHAR NUMBER");
+    scanf("%s", u1.adharnum);
+
+    printf("\n\nPHONE NUMBER");
+    scanf("%s", u1.pnumber);
+
+    printf("\n\nUSERNAME.. ");
+    scanf("%s", &u1.username);
+
+    printf("\n\nPASSWORD.. ");
 }
