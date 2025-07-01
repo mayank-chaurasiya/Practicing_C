@@ -121,4 +121,4 @@ Suppose the random word is `"pizza"`.
 - The game randomly selects a word and gives a hint.
 - The player guesses letters, with up to 6 wrong tries allowed.
 - Correct guesses reveal letters; incorrect guesses draw the hangman.
-- The game ends with a win (all letters guessed) or a loss (6 wrong
+- The game ends with a win (all letters guessed) or a loss (6 wrong tries).
