@@ -79,7 +79,7 @@ int main()
     gotoxy(20, 14);
     printf("3.... EXITn\n\n");
 
-    printf("\n\nENTER YOUR CHOICE..");
+    printf("\n\nENTER YOUR CHOICE..  ");
 
     scanf("%d", &choice);
 
@@ -124,42 +124,42 @@ void account(void)
     system("cls");
     printf("\n\n!!!!!CREATE ACCOUNT!!!!!");
 
-    printf("\n\nFIRST NAME..");
+    printf("\n\nFIRST NAME..  ");
     scanf("%s", &u1.fname);
 
-    printf("\n\nLAST NAME..");
+    printf("\n\nLAST NAME..  ");
     scanf("%s", &u1.lname);
 
-    printf("\n\nFATHER NAME..");
+    printf("\n\nFATHER NAME..  ");
     scanf("%s", &u1.fathername);
 
-    printf("\n\nMOTHER NAME..");
+    printf("\n\nMOTHER NAME..  ");
     scanf("%s", &u1.mothername);
 
-    printf("\n\nADDRESS..");
+    printf("\n\nADDRESS..  ");
     scanf("%s", &u1.address);
 
-    printf("\n\nACCOUNT TYPE..");
+    printf("\n\nACCOUNT TYPE..  ");
     scanf("%s", &u1.typeaccount);
 
-    printf("\n\nDATE OF BIRTH..");
-    printf("\nDATE-");
+    printf("\n\nDATE OF BIRTH..  ");
+    printf("\nDATE- ");
     scanf("%d", &u1.date);
-    printf("\nMONTH-");
+    printf("\nMONTH- ");
     scanf("%d", &u1.month);
-    printf("\nYEAR-");
+    printf("\nYEAR- ");
     scanf("%d", &u1.year);
 
-    printf("\n\nADHAR NUMBER");
+    printf("\n\nADHAR NUMBER  ");
     scanf("%s", u1.adharnum);
 
-    printf("\n\nPHONE NUMBER");
+    printf("\n\nPHONE NUMBER  ");
     scanf("%s", u1.pnumber);
 
-    printf("\n\nUSERNAME.. ");
+    printf("\n\nUSERNAME..  ");
     scanf("%s", &u1.username);
 
-    printf("\n\nPASSWORD.. ");
+    printf("\n\nPASSWORD..  ");
 
     // Taking password in the form of stars
     for (i = 0; i < 50; i++)
@@ -205,7 +205,7 @@ void accountcreated(void)
     printf("ACCOUNT CREATED SUCCESSFULLY....");
     gotoxy(0, 20);
 
-    printf("Press enter to login");
+    printf("Press enter to login..");
 
     getch();
     login();
@@ -243,11 +243,11 @@ void login(void)
 
     // Take input
     gotoxy(35, 12);
-    printf("USERNAME.. ");
+    printf("USERNAME..  ");
     scanf("%s", &username);
 
     gotoxy(35, 14);
-    printf("PASSWORD..");
+    printf("PASSWORD..  ");
 
     // Input the password
     for (i = 0; i < 50; i++)
@@ -286,7 +286,7 @@ void loginsu(void)
     FILE *fp;
     struct pass u1;
     system("cls");
-    prinft("Fetching account details......\n");
+    printf("Fetching account details......\n");
     for (i = 0; i < 20000; i++)
     {
         i++;
@@ -296,7 +296,7 @@ void loginsu(void)
     gotoxy(30, 10);
     printf("LOGIN SUCCESSFUL....");
     gotoxy(0, 20);
-    printf("Press enter to continue");
+    printf("Press enter to continue..");
 
     getch();
 }
@@ -332,28 +332,28 @@ void display(char username1[])
             printf("**********************************");
 
             gotoxy(55, 10);
-            printf("NAME..%s %s", u1.fname, u1.lname);
+            printf("NAME..  %s %s", u1.fname, u1.lname);
 
             gotoxy(55, 12);
-            printf("FATHER's NAME..%s %s", u1.fathername, u1.lname);
+            printf("FATHER's NAME..  %s %s", u1.fathername, u1.lname);
 
             gotoxy(55, 14);
-            printf("MOTHER's NAME..%s", u1.mothername);
+            printf("MOTHER's NAME..  %s", u1.mothername);
 
             gotoxy(55, 16);
-            printf("ADHAR CARD NUMBER..%s", u1.adharnum);
+            printf("ADHAR CARD NUMBER..  %s", u1.adharnum);
 
             gotoxy(55, 18);
-            printf("MOBILE NUMBER..%s", u1.pnumber);
+            printf("MOBILE NUMBER..  %s", u1.pnumber);
 
             gotoxy(55, 20);
             printf("DATE OF BIRTH.. %d-%d-%d (dd-mm-yy)", u1.date, u1.month, u1.year);
 
             gotoxy(55, 22);
-            printf("ADDRESS..%s", u1.address);
+            printf("ADDRESS..  %s", u1.address);
 
             gotoxy(55, 24);
-            printf("ACCOUNT TYPE..%s", u1.typeaccount);
+            printf("ACCOUNT TYPE..  %s", u1.typeaccount);
         }
     }
 
@@ -426,11 +426,11 @@ void transfermoney(void)
     printf("========================");
 
     gotoxy(33, 11);
-    printf("FROM (your username).. ");
+    printf("FROM (your username)..  ");
     scanf("%s", &usernamet);
 
     gotoxy(33, 13);
-    printf("TO (username of person)..");
+    printf("TO (username of person)..  ");
     scanf("%s", &usernamep);
 
     // Checking for username if it is present in file or not
@@ -445,7 +445,7 @@ void transfermoney(void)
 
     // Taking amount input
     gotoxy(33, 16);
-    printf("ENTER THE AMOUNT TO BE TRANSFERRED..");
+    printf("ENTER THE AMOUNT TO BE TRANSFERRED..  ");
     scanf("%d", &m1.money1);
 
     // Writing to the file
@@ -534,7 +534,7 @@ void checkbalance(char username2[])
     }
 
     gotoxy(80, 10);
-    printf("TOTOAL AMOUNT");
+    printf("TOTOAL AMOUNT ");
 
     gotoxy(80, 12);
     printf("%d", summoney);
