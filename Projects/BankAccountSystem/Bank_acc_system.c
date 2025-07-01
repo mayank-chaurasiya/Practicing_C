@@ -368,18 +368,85 @@ void display(char username1[])
 
     gotoxy(0, 9);
     printf(" 1....CHECK BALANCE");
-    
+
     gotoxy(0, 11);
     printf(" 2....TRANSFER MONEY");
-    
+
     gotoxy(0, 13);
     printf(" 3....LOG OUT\n\n");
-    
+
     gotoxy(0, 15);
     printf(" 4....EXIT\n\n");
 
-    printf(" ENTER YOUR CHOICES..");;
+    printf(" ENTER YOUR CHOICES..");
     scanf("%d", &choice);
 
-    
+    switch (choice)
+    {
+    case 1:
+        checkbalance(username1);
+        break;
+
+    case 2:
+        transfermoney();
+        break;
+
+    case 3:
+        logout();
+        login();
+        break;
+
+    case 4:
+        exit(0);
+        break;
+    }
+}
+
+// Function to transfer money from one user to another
+void transfermoney(void)
+{
+    int i, j;
+    FILE *fm, *fp;
+    struct pass u1;
+    struct money m1;
+    char usernamet[20];
+    char usernamep[20];
+    system("cls");
+
+    // Opening file in read mode to read user's username
+    fp = fopen("username.txt", "rb");
+
+    // Creating a another file to write amount along with username to which amount is going to be transferred
+    fm = fopen("mon.txt", "ab");
+
+    gotoxy(33, 4);
+    printf("---- TRANSFER MONEY ----");
+
+    gotoxy(33, 5);
+    printf("========================");
+
+    gotoxy(33, 11);
+    printf("FROM (your username).. ");
+    scanf("%s", &usernamet);
+
+    gotoxy(33, 13);
+    printf("TO (username of person)..");
+    scanf("%s", &usernamep);
+
+    // Checking for username if it is present in file or not
+    while (fread(&u1, sizeof(u1), 1, fp))
+    {
+        if (strcmp(usernamep, u1.username) == 0)
+        {
+            strcpy(m1.usernameto, u1.username);
+            strcpy(m1.userpersonfrom, usernamet);
+        }
+    }
+
+    // Taking amount input
+    gotoxy(33, 16);
+    printf("ENTER THE AMOUNT TO BE TRANSFERRED..");
+    scanf("%d", &m1.money1);
+
+    // Writing to the file
 }
