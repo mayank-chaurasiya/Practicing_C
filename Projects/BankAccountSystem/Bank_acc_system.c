@@ -449,4 +449,36 @@ void transfermoney(void)
     scanf("%d", &m1.money1);
 
     // Writing to the file
+    fwrite(&m1, sizeof(m1), 1, fm);
+
+    gotoxy(0, 26);
+    printf("-----------------------------------------------------------------------------------------------------------------------------------------");
+
+    gotoxy(0, 28);
+    printf("-----------------------------------------------------------------------------------------------------------------------------------------");
+
+    gotoxy(0, 29);
+    printf("transferring amount, Please wait..");
+
+    gotoxy(10, 27);
+    for (i = 0; i < 70; i++)
+    {
+        for (j = 0; j < 1200000; j++)
+        {
+            j++;
+            j--;
+        }
+        printf("*");
+    }
+
+    gotoxy(33, 40);
+    printf("AMOUNT TRANSFERRED SUCCESSFULLY.....");
+    getch();
+
+    // close the files
+    fclose(fp);
+    fclose(fm);
+
+    // function to return to the home screen
+    display(usernamet);
 }
