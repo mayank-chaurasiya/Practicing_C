@@ -25,3 +25,47 @@ void gotoxy(int x, int y)
 
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
 }
+
+// Creating a structure to store data of the user
+struct pass
+{
+    char username[50];
+    int date, month, year;
+    char pnumber[15];
+    char adharnum[20];
+    char fname[20];
+    char lname[20];
+    char fathername[20];
+    char mothername[20];
+    char address[50];
+    char typeaccount[20];
+};
+
+// Structure to keep track of amount transfer
+struct money
+{
+    char usernameto[50];
+    char userpersonfrom[50];
+    long int money1;
+};
+
+struct userpass
+{
+    char password[50];
+};
+
+int main()
+{
+    int i, a, b, choice;
+    int passwordlength;
+
+    gotoxy(20, 3);
+
+    // creating a main menu for the user
+    printf("WELCOME TO BANK ACCOUNT SYSTEM\n\n");
+    gotoxy(18, 5);
+
+    printf("**********************************");
+    gotoxy(25, 7);
+    
+}
