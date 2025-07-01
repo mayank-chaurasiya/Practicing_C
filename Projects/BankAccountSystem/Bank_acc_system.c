@@ -82,4 +82,54 @@ int main()
     printf("\n\nENTER YOUR CHOICE..");
 
     scanf("%d", &choice);
+
+    switch (choice)
+    {
+    case 1:
+        system("cls");
+        printf("\n\n USERNAME 50 CHARACTERS MAX!!");
+        printf("\n\n PASSWORD 50 CHARACTERS MAX!!");
+        account();
+        break;
+
+    case 2:
+        login();
+        break;
+
+    case 3:
+        exit(0);
+        break;
+
+        getch();
+    default:
+        break;
+    }
+}
+
+// Function to create accounts of users
+void account(void)
+{
+    char password[20];
+    int passwordLenght, i, seek = 0;
+    char ch;
+    FILE *fp, *fu;
+    struct pass u1;
+    struct userpass p1;
+    struct userpass u2;
+
+    // Opening File to write data of a user
+    fp = fopen("username.txt", "ab");
+
+    // inputs
+    system("cls");
+    printf("\n\n!!!!!CREATE ACCOUNT!!!!!");
+
+    printf("\n\nFIRST NAME..");
+    scanf("%s", &u1.fname);
+
+    printf("\n\nLAST NAME..");
+    scanf("%s", &u1.lname);
+
+    printf("\n\nFATHER NAME..");
+    scanf("%s", &u1.fathername);
 }
