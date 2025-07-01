@@ -160,4 +160,29 @@ void account(void)
     scanf("%s", &u1.username);
 
     printf("\n\nPASSWORD.. ");
+
+    // Taking password in the form of stars
+    for (i = 0; i < 50; i++)
+    {
+        ch = getch();
+        if (ch != 13)
+        {
+            password[i] = ch;
+            ch = '*';
+            printf("%c", ch);
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    // writing to the file
+    fwrite(&u1, sizeof(u1), 1, fp);
+
+    // closing file
+    fclose(fp);
+
+    // Calling another function after successful creation of account
+    accountcreated();
 }
