@@ -101,3 +101,33 @@ void findByFirstname()
         }
     }
 }
+
+// Function to find the students enrolled in a particular course
+void findByCourse()
+{
+    int id;
+    printf("Enter the course ID \n");
+    scanf("%d", &id);
+    int c = 0;
+
+    for (int j = 1; j <= i; j++)
+    {
+        for (int d = 0; d < 5; d++)
+        {
+            if (id == student[j].courseId[d])
+            {
+                printf("The Students Details are :- \n");
+                printf("Full name : %s %s\n", student[i].firstName, student[i].lastName);
+                printf("Roll no. : %d\n", student[i].roll);
+                printf("CGPA scored : %f \n", student[i].cgpa);
+
+                c = 1;
+                break;
+            }
+            else
+            {
+                printf("The first name not found\n");
+            }
+        }
+    }
+}
