@@ -21,21 +21,17 @@ struct studentInfo
 // Function to add the student
 void addStudent()
 {
-    printf("Add the Students Details\n");
-    printf("________________________________________");
+    printf("\n\nAdd the Students Details\n");
+    printf("________________________________________\n");
     printf("First name of the student: ");
     scanf("%s", student[i].firstName);
-    printf("\n");
     printf("Last name of the student: ");
     scanf("%s", student[i].lastName);
-    printf("\n");
     printf("Roll No. : ");
     scanf("%d", &student[i].roll);
-    printf("\n");
     printf("CGPA obtained : ");
     scanf("%f", &student[i].cgpa);
-    printf("\n");
-    printf("Enter the course id of each course - ");
+    printf("Enter the course id of each course below - \n");
     for (int j = 0; j < 5; j++)
     {
         scanf("%d", &student[i].courseId[j]);
@@ -47,14 +43,14 @@ void addStudent()
 void findByRoll()
 {
     int x;
-    printf("Enter the roll number of the individual \n");
+    printf("\n\nEnter the roll number of the individual \n");
     scanf("%d", &x);
 
     for (int j = 1; j <= i; j++)
     {
         if (x == student[i].roll)
         {
-            printf("The Students Details are :- \n");
+            printf("\n\nThe Students Details are :- \n");
             printf("Full name : %s %s\n", student[i].firstName, student[i].lastName);
             printf("Roll no. : %d\n", student[i].roll);
             printf("CGPA scored : %f \n", student[i].cgpa);
@@ -76,7 +72,7 @@ void findByRoll()
 void findByFirstname()
 {
     char a[50];
-    printf("Enter the First Name of the student \n");
+    printf("\n\nEnter the First Name of the student \n");
     scanf("%s", a);
     int c = 0;
 
@@ -108,7 +104,7 @@ void findByFirstname()
 void findByCourse()
 {
     int id;
-    printf("Enter the course ID \n");
+    printf("\n\nEnter the course ID \n");
     scanf("%d", &id);
     int c = 0;
 
@@ -138,7 +134,7 @@ void findByCourse()
 
 void totalStudent()
 {
-    printf("The total number of students are %d\n", i);
+    printf("\n\nThe total number of students are %d\n", i);
     printf("\n You can log max of 50 Student's Data.\n");
     printf(" remaining space in the system %d", 50 - i);
 }
@@ -147,7 +143,7 @@ void totalStudent()
 void deleteStudentByRoll()
 {
     int roll;
-    printf("Enter the Roll number which you want to remove from the system\n");
+    printf("\n\nEnter the Roll number which you want to remove from the system\n");
     scanf("%d", &roll);
     for (int j = 1; j <= i; j++)
     {
@@ -160,14 +156,14 @@ void deleteStudentByRoll()
             i--;
         }
     }
-    printf("Student data associated with %d Roll number has been removed.\n", roll);
+    printf("\nStudent data associated with %d Roll number has been removed.\n", roll);
 }
 
 // Function to update Students Data
 void updateInfo()
 {
     long int roll;
-    printf("Enter the roll number to update the entry : ");
+    printf("\n\nEnter the roll number to update the entry : ");
     scanf("%ld", &roll);
 
     for (int j = 0; j < i; j++)
@@ -215,10 +211,10 @@ void main()
     int choice, count;
     while (i = 1)
     {
-        printf("Tasks you can perform in the system : \n");
-        printf("1. Add the Studen Details \n 2. Find the Student details by Roll Number \n 3. Find the Student details by Their First name \n 4. Find the students enrolled in the individual courses \n 5. Find the Total number of students \n 6. Delete the Students Details through their Roll no. \n 7. Update the Students details by Roll Number \n 8. To Exit \n");
+        printf("\n\nTasks you can perform in the system : \n");
+        printf(" 1. Add the Student's Details \n 2. Find the Student's details by Roll Number \n 3. Find the Student's details by Their First name \n 4. Find the students enrolled in the individual courses \n 5. Find the Total number of students \n 6. Delete the Student's Details through their Roll no. \n 7. Update the Student's details by Roll Number \n 8. To Exit \n");
 
-        printf("Enter your choice to initialize the related task \n");
+        printf("\nEnter your choice to initialize the related task: ");
         scanf("%d", &choice);
         switch (choice)
         {
