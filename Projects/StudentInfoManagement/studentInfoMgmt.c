@@ -160,3 +160,50 @@ void deleteStudentByRoll()
     }
     printf("Student data associated with %d Roll number has been removed.\n", roll);
 }
+
+// Function to update Students Data
+void updateInfo()
+{
+    long int roll;
+    printf("Enter the roll number to update the entry : ");
+    scanf("%ld", &roll);
+
+    for (int j = 0; j < i; j++)
+    {
+        if (student[j].roll == roll)
+        {
+            int option;
+            printf("1. First Name \n 2. Last Name \n 3. Roll no. \n 4. CGPA \n 5. Courses \n");
+            scanf("%d", &option);
+
+            switch (option)
+            {
+            case 1:
+                printf("Enter new First name : \n");
+                scanf("%s", student[j].firstName);
+                break;
+
+            case 2:
+                printf("Enter new Last name : \n");
+                scanf("%s", student[j].lastName);
+                break;
+
+            case 3:
+                printf("Enter new Roll : \n");
+                scanf("%d", &student[j].roll);
+                break;
+
+            case 4:
+                printf("Enter updated CGPA : \n");
+                scanf("%f", &student[j].cgpa);
+                break;
+
+            case 5:
+                printf("Enter updated course id's : \n");
+                scanf("%d%d%d%d%d", &student[j].courseId[0], &student[j].courseId[1], &student[j].courseId[2], &student[j].courseId[3], &student[j].courseId[4]);
+                break;
+            }
+            printf("--------------- UPDATED LOG'S SUCCESFULLY ----------------");
+        }
+    }
+}
