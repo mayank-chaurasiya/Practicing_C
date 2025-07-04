@@ -131,3 +131,13 @@ void findByCourse()
         }
     }
 }
+
+// Function to print the total number of students
+
+void totalStudent()
+{
+    printf("The total number of students are %d\n", i);
+    printf("\n You can log max of 50 Student's Data.\n");
+    printf(" remaining space in the system %d", 50 - i);
+}
+
