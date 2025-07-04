@@ -141,3 +141,22 @@ void totalStudent()
     printf(" remaining space in the system %d", 50 - i);
 }
 
+// Function to Delete a Students data by the roll number
+void deleteStudentByRoll()
+{
+    int roll;
+    printf("Enter the Roll number which you want to remove from the system\n");
+    scanf("%d", &roll);
+    for (int j = 1; j <= i; j++)
+    {
+        if (roll == student[j].roll)
+        {
+            for (int k = j; k < 49; k++)
+            {
+                student[k] = student[k + 1];
+            }
+            i--;
+        }
+    }
+    printf("Student data associated with %d Roll number has been removed.\n", roll);
+}
