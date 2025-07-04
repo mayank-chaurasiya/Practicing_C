@@ -1,3 +1,5 @@
+// C Program for the implementation of menu driven program for student management system
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -204,6 +206,56 @@ void updateInfo()
                 break;
             }
             printf("--------------- UPDATED LOG'S SUCCESFULLY ----------------");
+        }
+    }
+}
+
+void main()
+{
+    int choice, count;
+    while (i = 1)
+    {
+        printf("Tasks you can perform in the system : \n");
+        printf("1. Add the Studen Details \n 2. Find the Student details by Roll Number \n 3. Find the Student details by Their First name \n 4. Find the students enrolled in the individual courses \n 5. Find the Total number of students \n 6. Delete the Students Details through their Roll no. \n 7. Update the Students details by Roll Number \n 8. To Exit \n");
+
+        printf("Enter your choice to initialize the related task \n");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            addStudent();
+            break;
+
+        case 2:
+            findByRoll();
+            break;
+
+        case 3:
+            findByFirstname();
+            break;
+
+        case 4:
+            findByCourse();
+            break;
+
+        case 5:
+            totalStudent();
+            break;
+
+        case 6:
+            deleteStudentByRoll();
+            break;
+
+        case 7:
+            updateInfo();
+            break;
+
+        case 8:
+            exit(0);
+            break;
+
+        default:
+            break;
         }
     }
 }
