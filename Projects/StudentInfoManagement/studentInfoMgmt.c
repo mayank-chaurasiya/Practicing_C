@@ -56,12 +56,48 @@ void findByRoll()
             printf("Full name : %s %s\n", student[i].firstName, student[i].lastName);
             printf("Roll no. : %d\n", student[i].roll);
             printf("CGPA scored : %f \n", student[i].cgpa);
-            printf("Course id's : ");
+            printf("Course id's : \n");
+            for (int j = 0; j < 5; j++)
+            {
+                printf("The Course ID are %d\n", student[i].courseId[j]);
+            }
         }
-        for (int j = 0; j < 5; j++)
+        else
         {
-            printf("The Course ID are %d\n", student[i].courseId[j]);
+            printf("Roll no. not registerd..");
+            break;
         }
-        break;
+    }
+}
+
+// Function to find the student by the first name
+void findByFirstname()
+{
+    char a[50];
+    printf("Enter the First Name of the student \n");
+    scanf("%s", a);
+    int c = 0;
+
+    for (int j = 1; j <= i; j++)
+    {
+        if (!strcmp(student[j].firstName, a))
+        {
+            printf("The Students Details are :- \n");
+            printf("Full name : %s %s\n", student[i].firstName, student[i].lastName);
+            printf("Roll no. : %d\n", student[i].roll);
+            printf("CGPA scored : %f \n", student[i].cgpa);
+            printf("Course id's : \n");
+
+            for (int j = 0; j < 5; j++)
+            {
+                printf("The course ID are %d\n", student[i].courseId[j]);
+            }
+            c = 1;
+        }
+        else
+        {
+            printf("First Name not found \n");
+            break;
+        }
     }
 }
